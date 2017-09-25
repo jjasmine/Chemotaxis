@@ -1,12 +1,27 @@
- //declare bacteria variables here   
+Bacteria [] bug;
+
  void setup()   
  {     
- 	//initialize bacteria variables here   
- }   
- void draw()   
+ 	size(300,300);
+ 	bug = new Bacteria[300];
+ 	for(int i = 0; i < bug.length; i++)
+ 	{
+ 		bug[i] = new Bacteria();
+ 	}
+ }
+
+ 	 void draw()   
  {    
- 	//move and show the bacteria   
+ 	for(int i=0; i<bug.length; i++)
+ 	{
+ 		bug[i].move();
+ 		bug[i].show();
+
+
+
+ 	}
  }  
+
  class Bacteria    
  {     
  	//lots of java!   
